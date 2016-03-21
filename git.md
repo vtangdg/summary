@@ -144,7 +144,10 @@
 	> `y n e d s` yes,no,e 手工编辑该块，d 退出或者转到下一个文件，s分割该块
 	
 - `git rebase -i HEAD~[number]` 压缩多个commit
-	> 将最后一个pick改为squash或s（选择最后一次commit并把其它老commit都进行压缩。）
+	> `pick` git会应用这个补丁，以同样的提交信息（commit message）保存提交。  
+	> `squash` 把这个提交和前一个提交合并成为一个新的提交  
+	> `edit` 编辑提交  
+	> 如果把一行删除而不是指定'pick'、'squash'和‘edit''中的任何一个，git会从历史中移除该提交  
 
 - `git stash` 存储变更回到之前状态 `git stash apply` 解除stash并且恢复未提交的变更 `git stash list` 展示 `git stash apply stash@{标识符}`选择性恢复
 
